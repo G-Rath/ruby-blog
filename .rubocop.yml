@@ -166,3 +166,7 @@ Style/FormatStringToken:
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - "spec/**/*"
+
+# when on Windows, rubocop expects ctlf by default
+Style/EndOfLine:
+  EnforcedStyle: lf
