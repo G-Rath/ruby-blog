@@ -3,7 +3,8 @@ const webpack = require('webpack');
 
 environment.plugins.append('Provide', new webpack.ProvidePlugin({
   $: 'jquery',
-  jQuery: 'jquery',
+  jQuery: 'jquery'
+  // Popper: ['popper.js', 'default']
 }));
 
 /** @type {ConfigList} */
@@ -11,8 +12,6 @@ const environmentLoaders = environment.loaders;
 
 // remove unneeded loaders
 environmentLoaders.delete('babel');
-environmentLoaders.delete('sass');
-environmentLoaders.delete('moduleSass');
 
 // add the typescript loader
 environmentLoaders.append(
