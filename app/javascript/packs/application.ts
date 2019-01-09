@@ -7,14 +7,8 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-import jQuery from 'jquery';
-
-/*
-  jQuery definitions declare it as global, and it usually is,
-  so for the sake of ease-of-development, just assign it to the window.
- */
-// @ts-ignore -- technically an error b/c window.$ isn't defined
-window.$ = jQuery;
+import 'bootstrap';
+import './stylesheets.scss';
 
 $(() => {
   const myFn = (param: string) => console.log(param);
