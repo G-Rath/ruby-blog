@@ -5,7 +5,7 @@
     "run": "rails server"
   },
   "dependencies": {
-    "@rails/webpacker": "https://github.com/rails/webpacker",
+    "@rails/webpacker": "^4.0.0-rc.2",
     "jquery": "^3.3.1"
   },
   "devDependencies": {
