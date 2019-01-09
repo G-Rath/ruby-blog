@@ -1,10 +1,15 @@
 {
   "name": "ruby-blog",
   "private": true,
+  "scripts": {
+    "run": "rails server"
+  },
   "dependencies": {
-    "@rails/webpacker": "https://github.com/rails/webpacker"
+    "@rails/webpacker": "https://github.com/rails/webpacker",
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
+    "@types/jquery": "^3.3.29",
     "awesome-typescript-loader": "^5.2.1",
     "typescript": "^3.2.2",
     "webpack-dev-server": "^3.1.14"
