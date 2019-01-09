@@ -52,3 +52,6 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "dotenv-rails", groups: %i[development test]
 
 gem "devise"
+
+gem "bootstrap", "~> 4.2.1"
+gem "jquery-rails"
