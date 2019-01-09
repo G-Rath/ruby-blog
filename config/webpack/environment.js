@@ -20,4 +20,11 @@ environmentLoaders.append(
   }
 );
 
+// ensure we don't emit on error
+environment.config.merge({
+  optimization: {
+    noEmitOnErrors: true
+  }
+});
+
 module.exports = environment;
