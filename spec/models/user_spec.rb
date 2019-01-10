@@ -20,6 +20,15 @@ RSpec.describe User, type: :model do
       expect(subject).to_not be_valid
     end
 
+    it "email is already in use" do
+      second_subject = FactoryBot.build(:user)
+      second_subject.email = subject.email
+
+      subject.save
+
+      expect(second_subject).to_not be_valid
+    end
+
     it "first_name is missing" do
       subject.first_name = nil
 
