@@ -9,4 +9,13 @@ class User < ApplicationRecord
          :recoverable,
          :rememberable,
          :validatable
+
+  validates :first_name,
+            presence: true,
+            allow_nil: false,
+            allow_blank: false
+  validates :last_name,
+            presence: true,
+            allow_nil: false,
+            allow_blank: false
 end
