@@ -7,13 +7,11 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
+import entry from '@src/entry';
+import '@styles/stylesheets.scss';
 import 'bootstrap';
-import './stylesheets.scss';
 
-$(() => {
-  const myFn = (param: string) => console.log(param);
-
-  myFn('Hello World from Webpacker');
-
-  console.log($('body'));
-});
+/**
+ * Call `entry` once document is ready.
+ */
+jQuery(entry);
