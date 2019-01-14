@@ -18,4 +18,6 @@ class User < ApplicationRecord
             presence: true,
             allow_nil: false,
             allow_blank: false
+  validates :password_confirmation,
+            presence: true
 end
