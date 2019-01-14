@@ -53,3 +53,5 @@ gem "dotenv-rails", groups: %i[development test]
 gem "devise"
 
 gem "webpacker", ">= 4.0.x"
+
+gem "bootstrap_form", ">= 4.0.0"

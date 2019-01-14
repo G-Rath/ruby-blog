@@ -11,6 +11,9 @@ import entry from '@src/entry';
 import '@styles/stylesheets.scss';
 import 'bootstrap';
 
+// @ts-ignore -- for ease of development
+window.$ = window.jQuery = jQuery;
+
 /**
  * Call `entry` once document is ready.
  */
