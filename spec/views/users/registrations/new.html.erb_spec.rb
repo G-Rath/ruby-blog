@@ -4,7 +4,7 @@ RSpec.describe "users/registrations/new.html.erb", type: :view do
   before do
     stub_template "users/shared/_links.html.erb" => "User Links"
 
-    render template: "users/registrations/new.html.erb", locals: { resource: User.new, resource_name: :user }
+    render template: "users/registrations/new", locals: { resource: User.new, resource_name: :user }
   end
 
   it "should contain an email input for 'email'" do
@@ -28,6 +28,6 @@ RSpec.describe "users/registrations/new.html.erb", type: :view do
   end
 
   it "should contain a submit button labeled 'Sign Up'" do
-    expect(rendered).to have_submit_button("Sign up")
+    expect(rendered).to have_submit_button(I18n.t("users.registrations.new.buttons.submit"))
   end
 end
