@@ -6,8 +6,11 @@ RSpec.describe "layouts/_nav.html.erb", type: :view do
       render
     end
 
-    it "should contain the \"Home\" link" do
-      expect(rendered).to have_link("Home", href: home_index_path, class: "nav-link")
+    it "should contain the 'Home' link" do
+      expect(rendered).to have_link(
+        I18n.t("layouts._nav.buttons.home"),
+        href: root_path, class: "nav-link"
+      )
     end
   end
 
@@ -18,16 +21,19 @@ RSpec.describe "layouts/_nav.html.erb", type: :view do
       render
     end
 
-    it "does not show the \"Sign up\" button" do
-      expect(rendered).to_not have_link("Sign up")
+    it "does not show the 'Sign up' button" do
+      expect(rendered).to_not have_link(I18n.t("layouts._nav.buttons.sign_up"))
     end
 
-    it "does not show the \"Sign in\" button" do
-      expect(rendered).to_not have_link("Sign in")
+    it "does not show the 'Sign in' button" do
+      expect(rendered).to_not have_link(I18n.t("layouts._nav.buttons.sign_in"))
     end
 
-    it "shows the \"Sign out\" button" do
-      expect(rendered).to have_link("Sign out", href: destroy_user_session_path, class: "btn")
+    it "shows the 'Sign out' button" do
+      expect(rendered).to have_link(
+        I18n.t("layouts._nav.buttons.sign_out"),
+        href: destroy_user_session_path, class: "btn"
+      )
     end
   end
 
@@ -38,16 +44,22 @@ RSpec.describe "layouts/_nav.html.erb", type: :view do
       render
     end
 
-    it "shows the \"Sign up\" button" do
-      expect(rendered).to have_link("Sign up", href: new_user_registration_path, class: "btn")
+    it "shows the 'Sign up' button" do
+      expect(rendered).to have_link(
+        I18n.t("layouts._nav.buttons.sign_up"),
+        href: new_user_registration_path, class: "btn"
+      )
     end
 
-    it "shows the \"Sign in\" button" do
-      expect(rendered).to have_link("Sign in", href: new_user_session_path, class: "btn")
+    it "shows the 'Sign in' button" do
+      expect(rendered).to have_link(
+        I18n.t("layouts._nav.buttons.sign_in"),
+        href: new_user_session_path, class: "btn"
+      )
     end
 
-    it "does not show the \"Sign out\" button" do
-      expect(rendered).to_not have_link("Sign out")
+    it "does not show the 'Sign out' button" do
+      expect(rendered).to_not have_link(I18n.t("layouts._nav.buttons.sign_out"))
     end
   end
 end

@@ -30,4 +30,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_name: "RBlog"
+  layouts:
+    _nav:
+      buttons:
+        home: "Home"
+        sign_up: "Sign up"
+        sign_in: "Sign in"
+        sign_out: "Sign out"
+  users:
+    registrations:
+      new:
+        page_header: "Sign up"
+        min_password_length_help: "%{length} characters minimum"
+        buttons:
+          submit: "Sign up"

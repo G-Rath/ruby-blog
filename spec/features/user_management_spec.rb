@@ -10,12 +10,12 @@ RSpec.feature "User Management", type: :feature do
       expect(page.status_code).to eq(200)
       expect(page.current_path).to eq(new_user_registration_path)
 
-      expect(page).to have_selector "h2", text: "Sign up"
-      expect(page).to have_submit_button "Sign up"
+      expect(page).to have_selector "h2", text: I18n.t("users.registrations.new.page_header")
+      expect(page).to have_submit_button I18n.t("users.registrations.new.buttons.submit")
     end
 
     scenario "User tries to register without filling out any fields" do
-      click_button "Sign up"
+      click_button I18n.t("users.registrations.new.buttons.submit")
 
       expect(page).to have_invalid_bootstrap_field :user_first_name, type: "text"
       expect(page).to have_invalid_bootstrap_field :user_last_name, type: "text"
@@ -31,10 +31,10 @@ RSpec.feature "User Management", type: :feature do
       fill_in :user_password, with: subject.password
       fill_in :user_password_confirmation, with: subject.password
 
-      click_button "Sign up"
+      click_button I18n.t("users.registrations.new.buttons.submit")
 
       expect(page.current_path).to eq(root_path)
-      expect(page).to have_text "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
+      expect(page).to have_text I18n.t("devise.registrations.signed_up_but_unconfirmed")
     end
   end
 end
