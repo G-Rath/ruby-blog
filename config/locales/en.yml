@@ -38,3 +38,10 @@ en:
         sign_up: "Sign up"
         sign_in: "Sign in"
         sign_out: "Sign out"
+  users:
+    registrations:
+      new:
+        page_header: "Sign up"
+        min_password_length_help: "%{length} characters minimum"
+        buttons:
+          submit: "Sign up"

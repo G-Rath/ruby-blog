@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2><%= t(".page_header") %></h2>
 
 <%=
   bootstrap_form_for(
@@ -14,10 +14,10 @@
   </div>
 
   <%= f.email_field :email, { autofocus: true, autocomplete: "email" } %>
-  <%= f.password_field :password, autocomplete: "new-password", help: "#{@minimum_password_length} characters minimum" %>
+  <%= f.password_field :password, autocomplete: "new-password", help: t(".min_password_length_help", length: @minimum_password_length) %>
   <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
 
-  <%= f.submit "Sign up" %>
+  <%= f.submit t(".buttons.submit") %>
 <% end %>
 
 <%= render "users/shared/links" %>
